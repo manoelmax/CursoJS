@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+
+    <h1>Sua nacionalidade</h1>
+    <label for="txtnacionalidade">Digite seu pais de origem: </label>
+    <input type="text" name="txtnacionalidade" id="txtnacionalidade">
+    <input type="button" value="Verificar" id="botaoclique">
+    <div id="resultado">
+        
+    </div>
+    
+    <script>
+
+        var btn = document.querySelector('input#botaoclique')
+        btn.addEventListener('click', verificar)
+        var res = document.querySelector('div#resultado')
+        
+        var nacionalidade = document.querySelector('input#txtnacionalidade')
+        
+
+        function verificar(){
+            res.innerText = `Você digitou ${nacionalidade.value}. `
+            
+            if (nacionalidade.value == 'Brasil'){
+                res.innerHTML += 'Você é <strong>BRASILEIRO</strong>!'
+            }else{
+                res.innerHTML += 'Você é <strong>ESTRANGEIRO</strong>!'
+            }
+        }
+    </script>
+
+</body>
+</html>
