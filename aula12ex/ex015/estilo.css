@@ -21,9 +21,9 @@ section{
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.364);
 }
 
-div{
-    text-align: center;
-    padding: 8px;
+section > div#res > img{
+    width: 250px;
+    height: 250px;
 }
 
 footer{
